@@ -11,7 +11,15 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2.5.0  # Versi terbaru yang mendukung Node.js versi 16
+        uses: actions/checkout@v2.6.0  # Versi terbaru yang mungkin sudah mendukung Node.js versi 16
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Mengatur versi Node.js ke 16
+
+      - name: Install Dependencies
+        run: npm install  # Gantilah dengan perintah instalasi dependensi Anda jika berbeda
 
       - name: Send Telegram Notification
         env:
