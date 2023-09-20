@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.5.0  # Versi terbaru yang mendukung Node.js versi 16
 
       - name: Send Telegram Notification
         env:
